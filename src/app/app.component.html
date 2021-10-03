@@ -1,0 +1,92 @@
+
+<!-- Título do site do jogo -->
+<mat-toolbar style="margin-bottom: 15vh; background-color: red;">
+    <mat-card style="margin: 0 auto; background-color: rgb(161, 14, 14); margin-top: 8vh;">
+        <span style="justify-content: center;">Pedra - Papel - Tesoura</span>
+        <span fxFlex></span>
+    </mat-card>
+</mat-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="space-around">
+    <mat-card style="margin-right: 10px;">
+        <mat-card-header>
+            <div mat-card-avatar><img src="../assets/images/pedra.png" alt="Pedra" style="width: 50px;"></div>
+            <mat-icon mat-card-avatar></mat-icon>
+            <mat-card-title>Pedra</mat-card-title>
+            <mat-card-subtitle>Pedra vence a tesoura</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-button (click)="jogar('Pedra')" class="botao-pedra">Jogue com a pedra</button>
+        </mat-card-actions>
+    </mat-card>
+    
+    <mat-card style="margin-right: 10px;">
+        <mat-card-header>
+            <div mat-card-avatar><img src="../assets/images/papel.png" alt="Pedra" style="width: 50px;"></div>
+            <mat-icon mat-card-avatar></mat-icon>
+            <mat-card-title>Papel</mat-card-title>
+            <mat-card-subtitle>Papel vence a pedra</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-button (click)="jogar('Papel')" class="botao-papel">Jogue com o papel</button>
+        </mat-card-actions>
+    </mat-card>
+    
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar><img src="../assets/images/tesoura.png" alt="Pedra" style="width: 50px;"></div>
+            <mat-icon mat-card-avatar></mat-icon>
+            <mat-card-title>Tesoura</mat-card-title>
+            <mat-card-subtitle>Tesoura vence o papel</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-button (click)="jogar('Tesoura')" class="botao-pedra">Jogue com a tesoura</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<mat-card style="width: 50%; margin: 10vh auto; padding: 15px 40px 0 40px;">
+    <mat-card-header style=" justify-content: space-around;">
+        <mat-icon><img src="../assets/images/pedra.png" alt="Pedra" style="width: 50px; margin-left: -10px;"></mat-icon>
+        <mat-icon><img src="../assets/images/papel.png" alt="Papel" style="width: 50px;margin-right: 20px;"></mat-icon>
+        <mat-icon><img src="../assets/images/tesoura.png" alt="Tesoura" style="width: 50px;margin-left: 10px;"></mat-icon>
+        <br>
+        <mat-card-title style="font-size: 25px;">Resultado</mat-card-title>
+        <mat-card-subtitle style="font-size: 18px;">O computador escolheu:</mat-card-subtitle>
+        <mat-card-subtitle style="font-size: 28px;">
+            {{resultadoComputador}}
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card>
+        <mat-card-content style="text-align: center; font-size: 1.2rem;">
+            <span>{{ resultados.usuario }} Usuário Vs Computador {{ resultados.computador }}</span>
+        </mat-card-content>
+            <mat-card-content style="margin-top: 3vh; text-align: center;">
+                <h1>{{ resultado }}</h1>
+                </mat-card-content>
+    </mat-card>
+</mat-card>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4" style="margin-top: 14.8vh; background-color: red;">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+          </div>
+          <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: white;">© 2021 Copyright:
+      <a href="https://www.linkedin.com/in/tom%C3%A9-luan-4b9823160/" style="color: white;"> Tomé Luan Jorge Coelho</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
